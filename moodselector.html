@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mood Palette (No JS)</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f0f0;
+      text-align: center;
+      padding: 20px;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: inline-block;
+      margin: 10px;
+      padding: 10px 20px;
+      border: 2px solid #333;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    input[type="radio"] {
+      display: none;
+    }
+
+    .palette {
+      display: none;
+      margin-top: 30px;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .color-box {
+      width: 80px;
+      height: 80px;
+      border-radius: 8px;
+    }
+
+    /* Show palettes based on selected mood */
+    #happy:checked ~ .happy,
+    #sad:checked ~ .sad,
+    #calm:checked ~ .calm,
+    #energetic:checked ~ .energetic {
+      display: flex;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Mood-Based Color Palette</h1>
+
+  <input type="radio" name="mood" id="happy">
+  <label for="happy">😊 Happy</label>
+
+  <input type="radio" name="mood" id="sad">
+  <label for="sad">😢 Sad</label>
+
+  <input type="radio" name="mood" id="calm">
+  <label for="calm">😌 Calm</label>
+
+  <input type="radio" name="mood" id="energetic">
+  <label for="energetic">⚡ Energetic</label>
+
+  <div class="palette happy">
+    <div class="color-box" style="background: #FFD700;"></div>
+    <div class="color-box" style="background: #FFA500;"></div>
+    <div class="color-box" style="background: #FF69B4;"></div>
+    <div class="color-box" style="background: #FFE4B5;"></div>
+  </div>
+
+  <div class="palette sad">
+    <div class="color-box" style="background: #708090;"></div>
+    <div class="color-box" style="background: #4682B4;"></div>
+    <div class="color-box" style="background: #5F9EA0;"></div>
+    <div class="color-box" style="background: #A9A9A9;"></div>
+  </div>
+
+  <div class="palette calm">
+    <div class="color-box" style="background: #B0E0E6;"></div>
+    <div class="color-box" style="background: #E0FFFF;"></div>
+    <div class="color-box" style="background: #AFEEEE;"></div>
+    <div class="color-box" style="background: #D8BFD8;"></div>
+  </div>
+
+  <div class="palette energetic">
+    <div class="color-box" style="background: #FF4500;"></div>
+    <div class="color-box" style="background: #DC143C;"></div>
+    <div class="color-box" style="background: #FF6347;"></div>
+    <div class="color-box" style="background: #FF1493;"></div>
+  </div>
+
+</body>
+</html>
